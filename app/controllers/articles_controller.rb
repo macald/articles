@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   def index
-  	@publish_date = DateTime.now.strftime("%m/%d/%Y")
+  	@current_date = Time.now.strftime("%m/%d/%Y")
+
+  	@articles = Article.all
   end
 end

@@ -1,2 +1,7 @@
-<h1>Articles</h1>
-<p><%= @publish_date %></p>
+<p><%= @current_date %></p>
+<%- @articles.each do |a| %>
+	<h1><%= a.title %></h1>
+	<h2><%= a.description %></h2>
+	<p><%= a.created_at %></p>
+<%- end %>
+
